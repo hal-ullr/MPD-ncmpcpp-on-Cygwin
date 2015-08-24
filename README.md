@@ -2,9 +2,9 @@
 
 * * *
 
-## Step 1: Getting Cygwin and Cygwinports working
+## Step 1: Getting Cygwin and Cygwin Ports working
 
-First off, you'll want to download the setup [x86](http://cygwin.com/setup-x86.exe) or [x64](https://cygwin.com/setup-x86_64.exe)
+First off, you’ll want to download the setup [x86](https://cygwin.com/setup-x86.exe) or [x64](https://cygwin.com/setup-x86_64.exe)
 
 ### Cygwin Ports
 
@@ -16,15 +16,15 @@ Their website is here: http://cygwinports.org/, but the important part is:
 
 >    `cygstart -- /path/to/setup-x86.exe -K http://cygwinports.org/ports.gpg`
 
-> 3\. On Choose Installation Type page, select "Install from Internet".
+> 3\. On Choose Installation Type page, select “Install from Internet”.
 
 > 4\. On Choose Download Site(s) page, select a distro mirror, then enter ftp://ftp.cygwinports.org/pub/cygwinports in the User URL field and press Add (making sure that both are highlighted).
 
-The easiest way to do this is to open the Command Prompt in the directory with *setup-x86\*.exe* in it (shift + right click in Explorer, *"Open command window here"*) and typing `setup-x86.exe -K http://cygwinports.org/ports.gpg`. Choose default settings up until you get to mirror selection, and select a mirror (I always choose kernel.org, YMMV) and then add the cygwinports URL. **It is extremely important that both URLs are selected – your installation will fail if you select only the cygwinports URL and if you have only the Cygwin mirror URL, not all of the packages you need will be available.** Optionally, you can set the download directory to *%TEMP%* or something if you don't want the download folders polluting wherever you have your installer. It may take a minute for things to look like they're moving.
+The easiest way to do this is to open the Command Prompt in the directory with *setup-x86\*.exe* in it (shift + right click in Explorer, *“Open command window here”*) and typing `setup-x86.exe -K http://cygwinports.org/ports.gpg`. Choose default settings up until you get to mirror selection, and select a mirror (I always choose kernel.org, YMMV) and then add the Cygwin Ports URL. **It is extremely important that both URLs are selected – your installation will fail if you select only the Cygwin Ports URL and if you have only the Cygwin mirror URL, not all of the packages you need will be available.** Optionally, you can set the download directory to *%TEMP%* or something if you don’t want the download folders polluting wherever you have your installer. It may take a minute for things to look like they’re moving.
 
-### Instalation
+### Installation
 
-The following is a list of packages you'll need to install. **Cygwin Ports is required only for the *libmpdclient* package.** You don't have to bother with cygwinports if you plan to build this package from source yourself.
+The following is a list of packages you’ll need to install. **Cygwin Ports is required only for the *libmpdclient* package.** You don’t have to bother with Cygwin Ports if you plan to build this package from source yourself.
 
 |  Package                     |  Version as of time of writing   |
 | :--------------------------- | -------------------------------: |
