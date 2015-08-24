@@ -169,14 +169,14 @@ cd lame-3.99.5
 ##### ERROR WARNING
 Another error, if you get
 
-Lametime . c: 139 : 25 :  error :  ' _O_BINARY '  is not declared  ( first use in this function ) 
-     setMode ( fileno ( fp ),  _O_BINARY );
+> Lametime . c: 139 : 25 :  error :  ' _O_BINARY '  is not declared  ( first use in this function ) 
+>      setMode ( fileno ( fp ),  _O_BINARY );
 
 Open the lametime.c file, located on the frontend folder, inside the lame folder, with a text editor of choose, and search for:
 
 
-#elif defined __CYGWIN__ 
-    setMode (fileno (fp), _O_BINARY); 
+> \#elif defined __CYGWIN__ 
+>     setMode (fileno (fp), _O_BINARY); 
 
 
 remove the _ before _O_BINARY so it stays O_BINARY
