@@ -12,7 +12,7 @@ Nobody who I have ever walked through installing ncmpcpp has ever gotten this ri
 
 Their website is here: http://cygwinports.org/, but the important part is:
 
-> 2\. Launch setup-*.exe with the -K flag, e.g.:
+> 2\. Launch setup-\*.exe with the -K flag, e.g.:
 
 >    `cygstart -- /path/to/setup-x86.exe -K http://cygwinports.org/ports.gpg`
 
@@ -20,7 +20,7 @@ Their website is here: http://cygwinports.org/, but the important part is:
 
 > 4\. On Choose Download Site(s) page, select a distro mirror, then enter ftp://ftp.cygwinports.org/pub/cygwinports in the User URL field and press Add (making sure that both are highlighted).
 
-The easiest way to do this is to open the Command Prompt in the directory with *setup-x86\*.exe* in it (shift + right click in Explorer, *“Open command window here”*) and typing `setup-x86.exe -K http://cygwinports.org/ports.gpg`. Choose default settings up until you get to mirror selection, and select a mirror (I always choose kernel.org, YMMV) and then add the Cygwin Ports URL. **It is extremely important that both URLs are selected – your installation will fail if you select only the Cygwin Ports URL and if you have only the Cygwin mirror URL, not all of the packages you need will be available.** Optionally, you can set the download directory to *%TEMP%* or something if you don’t want the download folders polluting wherever you have your installer. It may take a minute for things to look like they’re moving.
+The easiest way to do this is to open the Command Prompt in the directory with `setup-*.exe` in it (shift + right click in Explorer, *“Open command window here”*) and typing `setup-x86.exe -K http://cygwinports.org/ports.gpg`. Choose default settings up until you get to mirror selection, and select a mirror (I always choose kernel.org, YMMV) and then add the Cygwin Ports URL. **It is extremely important that both URLs are selected – your installation will fail if you select only the Cygwin Ports URL and if you have only the Cygwin mirror URL, not all of the packages you need will be available.** Optionally, you can set the download directory to *%TEMP%* or something if you don’t want the download folders polluting wherever you have your installer. It may take a minute for things to look like they’re moving.
 
 ### Installation
 
