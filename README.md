@@ -170,13 +170,13 @@ cd lame-3.99.5
 Another error, if you get
 
 > Lametime . c: 139 : 25 :  error :  ' _O_BINARY '  is not declared  ( first use in this function ) 
->      setMode ( fileno ( fp ),  _O_BINARY );
+>      setMode ( fileno ( fp ),  \_O\_BINARY );
 
 Open the lametime.c file, located on the frontend folder, inside the lame folder, with a text editor of choose, and search for:
 
 
-> \#elif defined __CYGWIN__ 
->     setMode (fileno (fp), _O_BINARY); 
+> \#elif defined \_\_CYGWIN\_\_ 
+>     setMode (fileno (fp), \_\O_BINARY); 
 
 
 remove the _ before _O_BINARY so it stays O_BINARY
@@ -208,41 +208,41 @@ cd mpd-0.19.10
 ##### ERROR WARNING ##### 
 While in the middle of the make process, you might this error:
 
-src / system / SocketUtil . cxx: 79 : 29 :  error :  ' SO_PASSCRED '  WAS  not  declared  in  this  scope 
-  setsockopt ( fd ,  SOL_SOCKET ,  SO_PASSCRED , 
+> src / system / SocketUtil . cxx: 79 : 29 :  error :  ' SO_PASSCRED '  WAS  not  declared  in  this  scope 
+>   setsockopt ( fd ,  SOL_SOCKET ,  SO_PASSCRED , 
 
 if so, you'll have to reconfigure it again, this time using ./configure --disable-Un
 
-## ATTENTION ##
+## ATTENTION
 While in the process of the MPD configuration, pay attention to the positive packages, cause MPD will attempt to recognize them if they are installed:
 
-########### MPD CONFIGURATION ############
+########### MPD CONFIGURATION
 
-Archive support:
-        (-bzip2) (-ISO9660) (-ZIP)
-Client support:
-        (+ IPv6) (+ TCP) (+ UNIX Domain Sockets)
-Storage support:
-        (-NFS) (-SMB)
-File format support:
-        (+ AAC) (-AdPlug) (+ DSD) (-C64 SID) (- FFMPEG) (+ FLAC) (-FluidSynth) (-GME)
-        (+ Libsndfile) (-MikMod) (-MODPLUG) (+ MAD) (- MPG123) (-Musepack)
-        (+ Opus) (-OggTremor) (+ OggVorbis) (+ WAVE) (-WavPack) (-WildMidi)
-Other features:
-        (-libsamplerate) (-libsoxr) (+ Libmpdclient) (-inotify) (+ SQLite)
-Metadata support:
-        (+ ID3)
-Playback support:
-        (-ALSA) (+ FIFO) (+ File Recorder) (+ HTTP Daemon) (-JACK)
-        (+ Libao) (+ OSS) (-OpenAL) (-OS X) (-Pipeline)
-        (-PulseAudio) (-ROAR) (-SHOUTcast) (-Solaris) (-WinMM)
-Streaming encoder support:
-        (+ FLAC) (+ LAME) (-Shine) (+ Ogg Vorbis) (+ Opus) (-TwoLAME) (+ WAVE)
-Streaming support:
-        (-CDIO_PARANOIA) (+ CURL) (-SMBCLIENT) (-Soundcloud)
-        (-MMS)
-Event loop:
-        poll
+> Archive support:
+>         (-bzip2) (-ISO9660) (-ZIP)
+> Client support:
+>         (+ IPv6) (+ TCP) (+ UNIX Domain Sockets)
+> Storage support:
+>         (-NFS) (-SMB)
+> File format support:
+>         (+ AAC) (-AdPlug) (+ DSD) (-C64 SID) (- FFMPEG) (+ FLAC) (-FluidSynth) (-GME)
+>         (+ Libsndfile) (-MikMod) (-MODPLUG) (+ MAD) (- MPG123) (-Musepack)
+>         (+ Opus) (-OggTremor) (+ OggVorbis) (+ WAVE) (-WavPack) (-WildMidi)
+> Other features:
+>         (-libsamplerate) (-libsoxr) (+ Libmpdclient) (-inotify) (+ SQLite)
+> Metadata support:
+>         (+ ID3)
+> Playback support:
+>         (-ALSA) (+ FIFO) (+ File Recorder) (+ HTTP Daemon) (-JACK)
+>         (+ Libao) (+ OSS) (-OpenAL) (-OS X) (-Pipeline)
+>         (-PulseAudio) (-ROAR) (-SHOUTcast) (-Solaris) (-WinMM)
+> Streaming encoder support:
+>         (+ FLAC) (+ LAME) (-Shine) (+ Ogg Vorbis) (+ Opus) (-TwoLAME) (+ WAVE)
+> Streaming support:
+>         (-CDIO\_PARANOIA) (+ CURL) (-SMBCLIENT) (-Soundcloud)
+>         (-MMS)
+> Event loop:
+>         poll
 
 Names tagged as (+) means they're installed, and obviously (-) means not. If you followed this guide, all of the packages above are installed and is the essential for you to use MPD. Pay special attention to libmpdclient. if it isn't checked, you're probably using an outdated binary, depending on which date you saw this. Check my tip at the beginning of this guide and download the updated ones.
 
